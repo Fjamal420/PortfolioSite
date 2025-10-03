@@ -122,7 +122,7 @@ export default function Window({ id, onClose }) {
                 onClick={() => {
                   setLightboxSlides(
                     [
-                      "Hyundai.png",
+                      "/public/Hyundai.png",
                       "Levi.png",
                       "pizza.png",
                       "Polar.png",
@@ -131,7 +131,7 @@ export default function Window({ id, onClose }) {
                       "distorted.png",
                       "sun.png",
                       "planet.png",
-                    ].map((f) => ({ src: `/${f}` }))
+                    ].map((f) => ({ src: `/public${f}` }))
                   );
                   setLightboxIndex(i);
                   setLightboxOpen(true);
