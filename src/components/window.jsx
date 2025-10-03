@@ -104,15 +104,15 @@ export default function Window({ id, onClose }) {
           <h2 className="text-xl font-semibold mb-2">Photoshop</h2>
           <div className="grid grid-cols-3 gap-2">
             {[
-              "/public/Hyundai.png",
-              "/public/Levi.png",
-              "/public/pizza.png",
-              "/public/Polar.png",
-              "/public/FJ.png",
-              "/public/flux.png",
-              "/public/distorted.png",
-              "/public/sun.png",
-              "/public/planet.png",
+              "Hyundai.png",
+              "Levi.png",
+              "pizza.png",
+              "Polar.png",
+              "FJ.png",
+              "flux.png",
+              "distorted.png",
+              "sun.png",
+              "planet.png",
             ].map((file, i) => (
               <img
                 key={i}
@@ -122,7 +122,7 @@ export default function Window({ id, onClose }) {
                 onClick={() => {
                   setLightboxSlides(
                     [
-                      "/public/Hyundai.png",
+                      "Hyundai.png",
                       "Levi.png",
                       "pizza.png",
                       "Polar.png",
@@ -131,7 +131,7 @@ export default function Window({ id, onClose }) {
                       "distorted.png",
                       "sun.png",
                       "planet.png",
-                    ].map((f) => ({ src: `/public${f}` }))
+                    ].map((f) => ({ src: `/${f}` }))
                   );
                   setLightboxIndex(i);
                   setLightboxOpen(true);
