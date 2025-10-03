@@ -19,7 +19,7 @@ export default function Window({ id, onClose }) {
         {/* Top Section: Image + Info */}
         <div className="flex space-x-4 items-center">
           <img
-            src="/aurafarmingpfp.png"
+            src="/public/aurafarmingpfp.png"
             alt="Farshid Jamal"
             className="w-28 h-28 object-cover border border-gray-600"
           />
@@ -116,7 +116,7 @@ export default function Window({ id, onClose }) {
             ].map((file, i) => (
               <img
                 key={i}
-                src={`/${file}`}
+                src={`/public/${file}`}
                 alt={`Photoshop work ${i + 1}`}
                 className="border border-gray-600 rounded-md hover:scale-105 transition-transform cursor-pointer"
                 onClick={() => {
@@ -131,7 +131,7 @@ export default function Window({ id, onClose }) {
                       "distorted.png",
                       "sun.png",
                       "planet.png",
-                    ].map((f) => ({ src: `/${f}` }))
+                    ].map((f) => ({ src: `/public/${f}` }))
                   );
                   setLightboxIndex(i);
                   setLightboxOpen(true);
@@ -157,7 +157,7 @@ export default function Window({ id, onClose }) {
             ].map((file, i) => (
               <img
                 key={i}
-                src={`/${file}`}
+                src={`/public/${file}`}
                 alt={`Illustration ${i + 1}`}
                 className="border border-gray-600 rounded-md hover:scale-105 transition-transform cursor-pointer"
                 onClick={() => {
@@ -193,7 +193,7 @@ export default function Window({ id, onClose }) {
               ].map((file, i) => (
                 <img
                   key={i}
-                  src={`/${file}`}
+                  src={`/public/${file}`}
                   alt={`Lightroom work ${i + 1}`}
                   className="border border-gray-600 rounded-md hover:scale-105 transition-transform cursor-pointer"
                   onClick={() => {
@@ -283,18 +283,18 @@ export default function Window({ id, onClose }) {
         ].map((item, i) => (
           <div key={i} className="flex flex-col items-center">
             <img
-              src={`/${item.src}`}
+              src={`/public/${item.src}`}
               alt={item.label}
               className="border border-gray-600 rounded-md hover:scale-105 transition-transform cursor-pointer"
               onClick={() => {
                 setLightboxSlides(
                   [
-                    { src: "/case1.png" },
-                    { src: "/case2.png" },
-                    { src: "/case3.png" },
-                    { src: "/case4.png" },
-                    { src: "/case5.png" },
-                    { src: "/case6.png" },
+                    { src: "case1.png" },
+                    { src: "case2.png" },
+                    { src: "case3.png" },
+                    { src: "case4.png" },
+                    { src: "case5.png" },
+                    { src: "case6.png" },
                   ]
                 );
                 setLightboxIndex(i);
