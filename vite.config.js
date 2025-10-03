@@ -8,6 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(), // ✅ add this
   ],
-  root: './',
   publicDir: 'public'
 })
