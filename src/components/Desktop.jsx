@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import Icon from "./Icon.jsx"
 import Window from "./window.jsx"
-import Taskbar from "./taskbar.jsx"
+import Taskbar from "./Taskbar.jsx"
 
 export default function Desktop() {
   const [openWindows, setOpenWindows] = useState([])
