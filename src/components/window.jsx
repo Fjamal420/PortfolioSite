@@ -104,15 +104,15 @@ export default function Window({ id, onClose }) {
           <h2 className="text-xl font-semibold mb-2">Photoshop</h2>
           <div className="grid grid-cols-3 gap-2">
             {[
-              "Hyundai.png",
-              "Levi.png",
-              "pizza.png",
-              "Polar.png",
-              "FJ.png",
-              "flux.png",
-              "distorted.png",
-              "sun.png",
-              "planet.png",
+              "/public/Hyundai.png",
+              "/public/Levi.png",
+              "/public/pizza.png",
+              "/public/Polar.png",
+              "/public/FJ.png",
+              "/public/flux.png",
+              "/public/distorted.png",
+              "/public/sun.png",
+              "/public/planet.png",
             ].map((file, i) => (
               <img
                 key={i}
