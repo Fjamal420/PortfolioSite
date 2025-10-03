@@ -8,5 +8,9 @@ export default defineConfig({
     react(),
     tailwindcss(), // ✅ add this
   ],
-  base: "/PortfolioSite"
+  root: './',
+  build: {
+    outDir: 'dist',
+  },
+  publicDir: 'public'
 })
