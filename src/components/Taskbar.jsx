@@ -5,8 +5,11 @@ export default function Taskbar() {
     new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
   )
   const [playing, setPlaying] = useState(false)
-  const [volume, setVolume] = useState(0.5) // default volume
+  const [volume, setVolume] = useState(0.5)
   const audioRef = useRef(null)
+
+  // ✅ get correct path for GitHub Pages
+  const base = import.meta.env.BASE_URL
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -43,21 +46,21 @@ export default function Taskbar() {
           active:border-t-gray-600 active:border-l-gray-600 
           active:border-b-white active:border-r-white"
       >
-        <img src="/windows-icon.png" alt="Start" className="w-4 h-4 mr-1" />
+        <img src={`${base}windows-icon.png`} alt="Start" className="w-4 h-4 mr-1" />
         Start
       </button>
 
-      {/* Right side: system tray + clock */}
+      {/* Right side */}
       <div className="flex items-center space-x-2 pr-2 h-full">
 
-        {/* Volume icon (play/pause) */}
+        {/* Volume button */}
         <button
           onClick={toggleAudio}
           className="h-full px-1 flex items-center justify-center bg-gray-200 
             border border-gray-600 border-t-white border-l-white"
         >
           <img
-            src="/loudspeaker_rays-0.png"
+            src={`${base}loudspeaker_rays-0.png`}
             alt="Volume"
             className="w-4 h-4"
           />
@@ -74,8 +77,8 @@ export default function Taskbar() {
           className="w-20"
         />
 
-        {/* Hidden audio player */}
-        <audio ref={audioRef} src="/MACINTOSH PLUS - リサフランク420 _ 現代のコンピュー _(reupload).mp3" />
+        {/* Audio file */}
+        <audio ref={audioRef} src={`${base}music1.mp3`} />
 
         {/* Clock */}
         <div className="h-full px-2 flex items-center bg-gray-200 font-mono 
