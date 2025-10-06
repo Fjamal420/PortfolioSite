@@ -8,7 +8,6 @@ export default function Taskbar() {
   const [volume, setVolume] = useState(0.5) // default volume
   const audioRef = useRef(null)
   const base = import.meta.env.BASE_URL
-  console.log('hey now brown cow cow cow')
   const imagePath = ''
   useEffect(() => {
     const interval = setInterval(() => {
