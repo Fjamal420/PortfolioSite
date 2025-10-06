@@ -7,10 +7,8 @@ export default function Taskbar() {
   const [playing, setPlaying] = useState(false)
   const [volume, setVolume] = useState(0.5)
   const audioRef = useRef(null)
-
-  // ✅ get correct path for GitHub Pages
   const base = import.meta.env.BASE_URL
-
+  const imagePath = `${base}public/`
   useEffect(() => {
     const interval = setInterval(() => {
       setTime(
@@ -46,7 +44,7 @@ export default function Taskbar() {
           active:border-t-gray-600 active:border-l-gray-600 
           active:border-b-white active:border-r-white"
       >
-        <img src={`${base}windows-icon.png`} alt="Start" className="w-4 h-4 mr-1" />
+        <img src={`${imagePath}windows-icon.png`} alt="Start" className="w-4 h-4 mr-1" />
         Start
       </button>
 
@@ -60,7 +58,7 @@ export default function Taskbar() {
             border border-gray-600 border-t-white border-l-white"
         >
           <img
-            src={`${base}loudspeaker_rays-0.png`}
+            src={`${imagePath}/loudspeaker_rays-0.png`}
             alt="Volume"
             className="w-4 h-4"
           />
@@ -77,8 +75,8 @@ export default function Taskbar() {
           className="w-20"
         />
 
-        {/* Audio file */}
-        <audio ref={audioRef} src={`${base}music1.mp3`} />
+        {/* Hidden audio player */}
+        <audio ref={audioRef} src={`${imagePath}music1.mp3`} />
 
         {/* Clock */}
         <div className="h-full px-2 flex items-center bg-gray-200 font-mono 

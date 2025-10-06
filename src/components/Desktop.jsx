@@ -20,10 +20,10 @@ export default function Desktop() {
    const base = import.meta.env.BASE_URL
 
   const icons = [
-    { id: "about", label: "About", icon: `${base}msagent-3.png` },
-    { id: "work", label: "Work", icon: `${base}directory_closed-4.png` },
-    { id: "case", label: "Case Study", icon: `${base}briefcase-2.png` },
-    { id: "mail", label: "Mail", icon: `${base}outlook_express-4.png` },
+    { id: "about", label: "About", icon: "public/msagent-3.png" },
+    { id: "work", label: "Work", icon: "public/directory_closed-4.png" },
+    { id: "case", label: "Case Study", icon: "public/briefcase-2.png" },
+    { id: "mail", label: "Mail", icon: "public/outlook_express-4.png" },
   ]
 
   // stars lol
