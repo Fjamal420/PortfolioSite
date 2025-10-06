@@ -59,7 +59,7 @@ export default function Taskbar() {
             border border-gray-600 border-t-white border-l-white"
         >
           <img
-            src={`${imagePath}/loudspeakerRays0.png`}
+            src={`${base}/loudspeakerRays0.png`}
             alt="Volume"
             className="w-4 h-4"
           />
