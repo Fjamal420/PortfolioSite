@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import Icon from "./Icon.jsx"
 import Window from "./window.jsx"
-import Taskbar from "./taskbar.jsx"
+import Taskbar from "./Taskbar.jsx"
 
 export default function Desktop() {
   const [openWindows, setOpenWindows] = useState([])
@@ -18,10 +18,10 @@ export default function Desktop() {
   }
 
   const icons = [
-    { id: "about", label: "About", icon: "/msagent-3.png" },
-    { id: "work", label: "Work", icon: "/directory_closed-4.png" },
-    { id: "case", label: "Case Study", icon: "/briefcase-2.png" },
-    { id: "mail", label: "Mail", icon: "/outlook_express-4.png" },
+    { id: "about", label: "About", icon: "public/msagent-3.png" },
+    { id: "work", label: "Work", icon: "public/directory_closed-4.png" },
+    { id: "case", label: "Case Study", icon: "public/briefcase-2.png" },
+    { id: "mail", label: "Mail", icon: "public/outlook_express-4.png" },
   ]
 
   // ⭐ Generate random stars only once

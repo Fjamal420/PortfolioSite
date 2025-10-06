@@ -7,7 +7,8 @@ export default function Taskbar() {
   const [playing, setPlaying] = useState(false)
   const [volume, setVolume] = useState(0.5) // default volume
   const audioRef = useRef(null)
-
+  const base = import.meta.env.BASE_URL
+  const imagePath = `${base}public/`
   useEffect(() => {
     const interval = setInterval(() => {
       setTime(
@@ -43,7 +44,7 @@ export default function Taskbar() {
           active:border-t-gray-600 active:border-l-gray-600 
           active:border-b-white active:border-r-white"
       >
-        <img src="/windows-icon.png" alt="Start" className="w-4 h-4 mr-1" />
+        <img src={`${imagePath}windows-icon.png`} alt="Start" className="w-4 h-4 mr-1" />
         Start
       </button>
 
@@ -57,7 +58,7 @@ export default function Taskbar() {
             border border-gray-600 border-t-white border-l-white"
         >
           <img
-            src="/loudspeaker_rays-0.png"
+            src={`${imagePath}/loudspeaker_rays-0.png`}
             alt="Volume"
             className="w-4 h-4"
           />
@@ -75,7 +76,7 @@ export default function Taskbar() {
         />
 
         {/* Hidden audio player */}
-        <audio ref={audioRef} src="/MACINTOSH PLUS - リサフランク420 _ 現代のコンピュー _(reupload).mp3" />
+        <audio ref={audioRef} src={`${imagePath}music1.mp3`} />
 
         {/* Clock */}
         <div className="h-full px-2 flex items-center bg-gray-200 font-mono 

@@ -6,6 +6,9 @@ import "yet-another-react-lightbox/styles.css";
 
 export default function Window({ id, onClose }) {
   const nodeRef = useRef(null);
+  const base = import.meta.env.BASE_URL
+  const imagePath = `${base}public/`
+
 
   // 🔦 Lightbox state
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -19,7 +22,7 @@ export default function Window({ id, onClose }) {
         {/* Top Section: Image + Info */}
         <div className="flex space-x-4 items-center">
           <img
-            src="/aurafarmingpfp.png"
+            src={`${imagePath}aurafarmingpfp.png`}
             alt="Farshid Jamal"
             className="w-28 h-28 object-cover border border-gray-600"
           />
@@ -116,7 +119,7 @@ export default function Window({ id, onClose }) {
             ].map((file, i) => (
               <img
                 key={i}
-                src={`/${file}`}
+                src={`${imagePath}${file}`}
                 alt={`Photoshop work ${i + 1}`}
                 className="border border-gray-600 rounded-md hover:scale-105 transition-transform cursor-pointer"
                 onClick={() => {
@@ -131,7 +134,7 @@ export default function Window({ id, onClose }) {
                       "distorted.png",
                       "sun.png",
                       "planet.png",
-                    ].map((f) => ({ src: `/${f}` }))
+                    ].map((f) => ({ src: `${imagePath}${f}` }))
                   );
                   setLightboxIndex(i);
                   setLightboxOpen(true);
@@ -157,7 +160,7 @@ export default function Window({ id, onClose }) {
             ].map((file, i) => (
               <img
                 key={i}
-                src={`/${file}`}
+                src={`${imagePath}${file}`}
                 alt={`Illustration ${i + 1}`}
                 className="border border-gray-600 rounded-md hover:scale-105 transition-transform cursor-pointer"
                 onClick={() => {
@@ -193,7 +196,8 @@ export default function Window({ id, onClose }) {
               ].map((file, i) => (
                 <img
                   key={i}
-                  src={`/${file}`}
+                  src={`${imagePath}${file}`}
+
                   alt={`Lightroom work ${i + 1}`}
                   className="border border-gray-600 rounded-md hover:scale-105 transition-transform cursor-pointer"
                   onClick={() => {
@@ -204,7 +208,7 @@ export default function Window({ id, onClose }) {
                         "westside.png",
                         "clark.png",
                         "silenthill.png",
-                      ].map((f) => ({ src: `/${f}` }))
+                      ].map((f) => ({ src: `${imagePath}${f}` }))
                     );
                     setLightboxIndex(i);
                     setLightboxOpen(true);
@@ -225,7 +229,7 @@ export default function Window({ id, onClose }) {
               ].map((file, i) => (
                 <img
                   key={i}
-                  src={`/${file}`}
+                  src={`${imagePath}${file}`}
                   alt={`Infographic ${i + 1}`}
                   className="border border-gray-600 rounded-md hover:scale-105 transition-transform cursor-pointer"
                   onClick={() => {
@@ -234,7 +238,7 @@ export default function Window({ id, onClose }) {
                         "infographic1.png",
                         "infographic2.png",
                         "infographic3.png",
-                      ].map((f) => ({ src: `/${f}` }))
+                      ].map((f) => ({ src: `${imagePath}${f}` }))
                     );
                     setLightboxIndex(i);
                     setLightboxOpen(true);
@@ -283,18 +287,18 @@ export default function Window({ id, onClose }) {
         ].map((item, i) => (
           <div key={i} className="flex flex-col items-center">
             <img
-              src={`/${item.src}`}
+              src={`${imagePath}${item.src}`}
               alt={item.label}
               className="border border-gray-600 rounded-md hover:scale-105 transition-transform cursor-pointer"
               onClick={() => {
                 setLightboxSlides(
                   [
-                    { src: "/case1.png" },
-                    { src: "/case2.png" },
-                    { src: "/case3.png" },
-                    { src: "/case4.png" },
-                    { src: "/case5.png" },
-                    { src: "/case6.png" },
+                    { src: "case1.png" },
+                    { src: "case2.png" },
+                    { src: "case3.png" },
+                    { src: "case4.png" },
+                    { src: "case5.png" },
+                    { src: "case6.png" },
                   ]
                 );
                 setLightboxIndex(i);
@@ -318,7 +322,7 @@ export default function Window({ id, onClose }) {
         </p>
 
         <img
-          src="/quagsire.png"
+          src={`${imagePath}/quagsire.png`}
           alt="Quagsire"
           className="w-40 h-40 object-cover border border-gray-600"
         />
