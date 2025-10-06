@@ -5,7 +5,7 @@ export default function Taskbar() {
     new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
   )
   const [playing, setPlaying] = useState(false)
-  const [volume, setVolume] = useState(0.5) // default volume
+  const [volume, setVolume] = useState(0.5)
   const audioRef = useRef(null)
   const base = import.meta.env.BASE_URL
   const imagePath = `${base}public/`
@@ -48,10 +48,10 @@ export default function Taskbar() {
         Start
       </button>
 
-      {/* Right side: system tray + clock */}
+      {/* Right side */}
       <div className="flex items-center space-x-2 pr-2 h-full">
 
-        {/* Volume icon (play/pause) */}
+        {/* Volume button */}
         <button
           onClick={toggleAudio}
           className="h-full px-1 flex items-center justify-center bg-gray-200 

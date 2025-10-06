@@ -17,6 +17,8 @@ export default function Desktop() {
     setOpenWindows(openWindows.filter((w) => w !== id))
   }
 
+   const base = import.meta.env.BASE_URL
+
   const icons = [
     { id: "about", label: "About", icon: "public/msagent-3.png" },
     { id: "work", label: "Work", icon: "public/directory_closed-4.png" },
@@ -24,7 +26,7 @@ export default function Desktop() {
     { id: "mail", label: "Mail", icon: "public/outlook_express-4.png" },
   ]
 
-  // ⭐ Generate random stars only once
+  // stars lol
   useEffect(() => {
     const newStars = Array.from({ length: 40 }).map(() => ({
       top: Math.random() * 40 + "%", // only in top 40% of screen
@@ -41,7 +43,7 @@ export default function Desktop() {
       <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-920 to-purple-950"></div>
       <div className="absolute inset-0 bg-black opacity-20"></div>
 
-      {/* 🌙 Moon */}
+      {/*  Moon */}
       <div
         className="absolute rounded-full bg-gray-200 shadow-lg"
         style={{
@@ -53,7 +55,7 @@ export default function Desktop() {
         }}
       />
 
-      {/* ⭐ Pixelated stars */}
+      {/*  Pixelated stars */}
       <div className="absolute inset-0 pointer-events-none">
         {stars.map((star, i) => (
           <div
