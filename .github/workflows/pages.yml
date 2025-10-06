@@ -3,7 +3,7 @@ name: Deploy Vite site to GitHub Pages
 on:
   push:
     branches:
-      - new-image-fix # or main, or your deployment branch
+      - new-image-fix
 
 permissions:
   contents: read
@@ -15,8 +15,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
