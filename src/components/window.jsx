@@ -7,7 +7,7 @@ import "yet-another-react-lightbox/styles.css";
 export default function Window({ id, onClose }) {
   const nodeRef = useRef(null);
   const base = import.meta.env.BASE_URL
-  const imagePath = `${base}public/`
+  const imagePath = ``
 
 
   // 🔦 Lightbox state

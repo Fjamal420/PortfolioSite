@@ -9,7 +9,7 @@ export default function Taskbar() {
   const audioRef = useRef(null)
   const base = import.meta.env.BASE_URL
   console.log('hey now brown cow cow cow')
-  const imagePath = `dist/`
+  const imagePath = ''
   useEffect(() => {
     const interval = setInterval(() => {
       setTime(
