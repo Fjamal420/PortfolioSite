@@ -18,10 +18,10 @@ export default function Desktop() {
   }
 
   const icons = [
-    { id: "about", label: "About", icon: "public/msagent-3.png" },
-    { id: "work", label: "Work", icon: "public/directory_closed-4.png" },
-    { id: "case", label: "Case Study", icon: "public/briefcase-2.png" },
-    { id: "mail", label: "Mail", icon: "public/outlook_express-4.png" },
+    { id: "about", label: "About", icon: "msagent3.png" },
+    { id: "work", label: "Work", icon: "directoryClosed4.png" },
+    { id: "case", label: "Case Study", icon: "briefcase2.png" },
+    { id: "mail", label: "Mail", icon: "outlookExpress4.png" },
   ]
 
   // ⭐ Generate random stars only once

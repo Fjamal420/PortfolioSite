@@ -322,7 +322,7 @@ export default function Window({ id, onClose }) {
         </p>
 
         <img
-          src={`${imagePath}/quagsire.png`}
+          src={`${base}/quagsire.png`}
           alt="Quagsire"
           className="w-40 h-40 object-cover border border-gray-600"
         />
